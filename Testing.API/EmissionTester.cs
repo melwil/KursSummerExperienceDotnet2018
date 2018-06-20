@@ -22,6 +22,8 @@ namespace Testing.API
 
             var result = await Task.WhenAll(resultTask1, resultTask2);
 
+            await Task.Delay(1000);
+
             return somethingElse + result.Sum();
         }
 
