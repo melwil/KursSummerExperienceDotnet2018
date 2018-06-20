@@ -10,11 +10,10 @@ namespace KursSummerExperience2018
         public IServiceProvider serviceProvider { get; private set; }
 
         static void Main(string[] args)
-        => new Program().MainAsync().GetAwaiter().GetResult();
+            => new Program().MainAsync().GetAwaiter().GetResult();
 
-        public async Task MainAsync() {
-
-
+        public async Task MainAsync()
+        {
             var car = new Mercedes(4);
             Console.WriteLine($"Our Mercedes has {car.Wheels} wheels!");
 
@@ -36,7 +35,8 @@ namespace KursSummerExperience2018
 
         }
 
-        private void InitializeIoC() {
+        private void InitializeIoC()
+        {
             var services = new ServiceCollection();
 
             services.AddTransient<EmissionTestController>();

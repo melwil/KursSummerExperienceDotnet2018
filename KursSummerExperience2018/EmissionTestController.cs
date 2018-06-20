@@ -13,12 +13,12 @@ namespace KursSummerExperience2018
             _emissionTester = emissionTester;
         }
 
-        public async Task DoTest() {
+        public async Task<int> DoTest() {
             var result = await _emissionTester.RunEmissionTest();
 
             Console.WriteLine($"Emission test results: {result}");
 
-            return;
+            return result;
         }
     }
 }
